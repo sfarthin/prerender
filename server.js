@@ -14,7 +14,7 @@ var server = prerender({
 server.use(prerender.blacklist());
 // server.use(prerender.logger());
 //server.use(prerender.removeScriptTags());
-server.use(require("./lib/plugins/removeRequirejsStuff"));
+server.use(require(__dirname+"/lib/plugins/removeRequirejsStuff"));
 server.use(prerender.httpHeaders());
 // server.use(prerender.inMemoryHtmlCache());
 // server.use(prerender.s3HtmlCache());
